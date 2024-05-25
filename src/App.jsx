@@ -1,11 +1,13 @@
+import Page from "./page/page"
+import { ThemeContextProvider } from "./context/ThemeContext"
+
+
 function App() {
 
   return (
-    <>
-      <div>
-      <h1> portafolio </h1>
-      </div>
-    </>
+    <ThemeContextProvider>
+        <Page/>
+    </ThemeContextProvider>
   )
 }
 
