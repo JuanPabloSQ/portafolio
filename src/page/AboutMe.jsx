@@ -31,8 +31,7 @@ const AboutMe = () => {
                 SOBRE MI
             </Typography>
             <Typography variant="body1" gutterBottom>
-                Soy un desarrollador web full stack con experiencia en la creación de una variedad de proyectos. Me apasionan los desafíos nuevos e innovadores y estoy constantemente buscando oportunidades para expandir mis habilidades y conocimientos.
-                Además, tengo una segunda carrera en enfermería, lo cual me ha permitido desarrollar habilidades blandas como la comunicación efectiva, el trabajo en equipo y la resolución de problemas. Estas habilidades complementan mis habilidades técnicas y me permiten ofrecer soluciones completas y centradas en el usuario en mis proyectos.
+                Soy desarrollador web full stack con experiencia en diversos proyectos. Me apasionan los desafíos innovadores y busco constantemente expandir mis habilidades. Además, tengo una segunda carrera en enfermería, lo que me ha dotado de habilidades blandas como comunicación efectiva, trabajo en equipo y resolución de problemas, complementando mis habilidades técnicas para ofrecer soluciones centradas en el usuario.
             </Typography>
             <Typography variant="body1" gutterBottom sx={{ textTransform: 'uppercase', fontWeight: 'bold', fontSize: '1.2rem', color: 'SkyBlue' }}>
                 Actualmente estoy buscando una nueva oportunidad laboral, cuento con experiencia tanto en frontend como backend en el desarrollo web.
