@@ -1,15 +1,18 @@
 import NavBar from '../components/NavBar';
 import AboutMe from './AboutMe';
 import Intro from "./Intro";
-import Skills from "./Skills"
+import Skills from "./Skills";
+import Proyects from './Proyects';
+
 
 const Page = () => {
     return (
         <div>
             <NavBar/>
             <Intro/>
-            <AboutMe/>              
+            <AboutMe/>
             <Skills/>
+            <Proyects/>
         </div>
     );
 };
