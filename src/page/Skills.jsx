@@ -91,11 +91,11 @@ const Skills = () => {
                     <Typography variant="body1" sx={{ mt: 1 }}>Yup</Typography>
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                    <SiExpress size={50} color="#000000" />
+                    <SiExpress size={50}  />
                     <Typography variant="body1" sx={{ mt: 1 }}>Express</Typography>
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                    <SiJsonwebtokens size={50} color="#000000" />
+                    <SiJsonwebtokens size={50}  />
                     <Typography variant="body1" sx={{ mt: 1 }}>JWT</Typography>
                 </Box>
             </Box>
@@ -118,11 +118,11 @@ const Skills = () => {
                     <Typography variant="body1" sx={{ mt: 1 }}>Git</Typography>
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <FaGithub size={50} color="#181717" />
+                    <FaGithub size={50} />
                     <Typography variant="body1" sx={{ mt: 1 }}>GitHub</Typography>
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <SiVercel size={50} color="#000000" />
+                    <SiVercel size={50}  />
                     <Typography variant="body1" sx={{ mt: 1 }}>Vercel</Typography>
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>

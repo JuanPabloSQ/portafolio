@@ -1,14 +1,14 @@
+import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea, CardActions } from '@mui/material';
+import { CardActionArea, CardActions, Box } from '@mui/material';
 import { IconButton } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkIcon from '@mui/icons-material/Link';
 
-
-const BasicCard = ({ title, body, imagen, repo, link }) => { 
+const BasicCard = ({ title, body, imagen, repo, link, icons }) => { 
   return (
     <Card sx={{ width: 300, margin: 4 }}>
       <CardActionArea>
@@ -16,7 +16,7 @@ const BasicCard = ({ title, body, imagen, repo, link }) => {
           component="img"
           height="140"
           image={imagen} 
-          alt="green iguana"
+          alt="project image"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -25,6 +25,13 @@ const BasicCard = ({ title, body, imagen, repo, link }) => {
           <Typography variant="body2" color="text.secondary">
             {body}
           </Typography>
+          <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+            {icons.map(({ Component, props }, index) => (
+              <Box key={index} sx={{ mx: 1 }}>
+                <Component {...props} />
+              </Box>
+            ))}
+          </Box>
         </CardContent>
       </CardActionArea>
       <CardActions>
