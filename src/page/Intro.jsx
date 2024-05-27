@@ -13,14 +13,14 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 const Intro = () => {
     return (
         <Box
-        sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            minHeight: '100vh',
-            padding: 2,
-        }}
+            sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                minHeight: '100vh',
+                padding: 2,
+            }}
     >
         <Box
             sx={{

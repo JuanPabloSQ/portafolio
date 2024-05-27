@@ -8,7 +8,7 @@ import EmotonialLink from"../img/EmotonialLink.png";
 import ToDoList from "../img/ToDoList.png"
 import Blog from "../img/Blog.png"
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaBootstrap, FaGitAlt, FaGithub, FaTrain, FaMoneyCheckAlt, FaChartBar } from 'react-icons/fa';
-import { SiMui, SiExpress, SiJsonwebtokens, SiVercel } from 'react-icons/si';
+import { SiMui, SiExpress, SiJsonwebtokens} from 'react-icons/si';
 import { RiToolsLine } from 'react-icons/ri';
 
 const Proyects = () => {
@@ -103,6 +103,7 @@ const Proyects = () => {
                             { Component: FaReact, props: { size: 30, color: "#61DAFB" } },
                             { Component: FaJsSquare, props: { size: 30, color: "#F7DF1E" } },
                             { Component: SiMui, props: { size: 30, color: "#007FFF" } },
+                            { Component: FaChartBar, props: { size: 30, color: "#FFD700" } },
                         ]}
                     />
                     <BasicCard
