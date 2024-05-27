@@ -4,6 +4,7 @@ import Intro from "./Intro";
 import Skills from "./Skills";
 import Proyects from './Proyects';
 import Education from "./Education";
+import Contact from "./Contact"
 
 
 const Page = () => {
@@ -15,6 +16,7 @@ const Page = () => {
             <Skills/>
             <Proyects/>
             <Education/>
+            <Contact/>
         </div>
     );
 };

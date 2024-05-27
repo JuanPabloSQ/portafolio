@@ -50,7 +50,7 @@ const Education = () => {
             </Box>
             <Box sx={{mt:10}}>
                 <Typography variant="h5" gutterBottom>
-                Metodologías ágiles
+                METODOLOGÍAS ÁGILES
                 </Typography>
                 <Typography variant="h6" gutterBottom>
                 Scrum Foundation 
@@ -66,7 +66,7 @@ const Education = () => {
             </Box>
             <Box sx={{mt:10}}>
                 <Typography variant="h5" gutterBottom>
-                Curso de JavaScript, HTML, CSS y NodeJS
+                CURSO DE JAVASCRIPT, HTML, CSS Y NODEJS 
                 </Typography>
                 <Typography variant="h6" gutterBottom>
                 Udemy
