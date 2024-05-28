@@ -1,8 +1,9 @@
-import { blueGrey } from '@mui/material/colors';
+import { blueGrey, lightBlue} from '@mui/material/colors';
+
 
 const baseTheme = {
   primary: {
-    main: blueGrey[50],
+    main: lightBlue[50],
   },
   secondary: {
     main: blueGrey[50],

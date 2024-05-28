@@ -19,6 +19,7 @@ const Skills = forwardRef((props, ref) => {
                 padding: 2,
                 textAlign: 'center', 
                 margin: 'auto',
+                mt:10
             }}
         >
             <Box

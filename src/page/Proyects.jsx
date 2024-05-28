@@ -26,6 +26,7 @@ const Proyects = forwardRef((props, ref) => {
                 padding: 2,
                 textAlign: 'center',
                 margin: 'auto',
+                mt:30
             }}
         >
             <Box
