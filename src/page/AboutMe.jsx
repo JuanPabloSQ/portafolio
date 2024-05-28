@@ -1,9 +1,11 @@
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import { forwardRef } from 'react';
 
-const AboutMe = () => {
+const AboutMe = forwardRef((props, ref) => {
     return (
         <Box
+            ref={ref}
             sx={{
                 width: '70%', 
                 maxWidth: '1000px', 
@@ -50,7 +52,7 @@ const AboutMe = () => {
                 </Typography>
             </Box>
         </Box>
-    )
-};
+    );
+});
 
 export default AboutMe;

@@ -1,12 +1,13 @@
-import React from 'react';
+import { forwardRef } from 'react';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import { Email, Phone, LinkedIn, GitHub } from '@mui/icons-material';
 
-const Contact = () => {
+const Contact = forwardRef((props, ref) => {
   return (
     <Box
+      ref={ref}
       sx={{
         width: '70%',
         maxWidth: '1000px',
@@ -17,6 +18,7 @@ const Contact = () => {
         padding: 2,
         textAlign: 'center',
         margin: 'auto',
+        mt: 10,
       }}
     >
       <Box
@@ -84,6 +86,7 @@ const Contact = () => {
       </Box>
     </Box>
   );
-};
+});
 
 export default Contact;
+

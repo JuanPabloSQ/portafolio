@@ -10,10 +10,12 @@ import Blog from "../img/Blog.png";
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaBootstrap, FaGitAlt, FaGithub, FaTrain, FaMoneyCheckAlt, FaChartBar } from 'react-icons/fa';
 import { SiMui, SiExpress, SiJsonwebtokens, SiMongodb, SiFirebase } from 'react-icons/si';
 import { RiToolsLine } from 'react-icons/ri';
+import { forwardRef } from 'react';
 
-const Proyects = () => {
+const Proyects = forwardRef((props, ref) => {
     return (
         <Box
+            ref={ref}
             sx={{
                 width: '70%',
                 maxWidth: '1000px',
@@ -136,6 +138,6 @@ const Proyects = () => {
             </Box>
         </Box>
     );
-};
+});
 
 export default Proyects;

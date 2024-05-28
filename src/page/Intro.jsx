@@ -8,11 +8,13 @@ import { IconButton } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import { forwardRef } from 'react';
 
 
-const Intro = () => {
+const Intro = forwardRef((props, ref) => {
     return (
         <Box
+            ref={ref}
             sx={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -66,6 +68,6 @@ const Intro = () => {
         </Box>
     </Box>
     )
-};
+});
 
 export default Intro;

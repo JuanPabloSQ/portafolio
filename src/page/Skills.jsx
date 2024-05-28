@@ -3,10 +3,12 @@ import { SiMui, SiExpress, SiJsonwebtokens, SiVercel, SiMongodb, SiFirebase } fr
 import { RiToolsLine } from 'react-icons/ri';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import { forwardRef } from 'react';
 
-const Skills = () => {
+const Skills = forwardRef((props, ref) => {
     return(
-        <Box 
+        <Box
+            ref={ref}
             sx={{
                 width: '70%', 
                 maxWidth: '1000px', 
@@ -164,6 +166,6 @@ const Skills = () => {
             </Box>           
         </Box>
     )
-};
+});
 
 export default Skills;

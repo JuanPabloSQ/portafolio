@@ -1,10 +1,12 @@
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import { forwardRef } from 'react';
 
-const Education = () => {
+const Education = forwardRef((props, ref) => {
     return (
         <Box
+            ref={ref}
             sx={{
                 width: '70%', 
                 maxWidth: '1000px', 
@@ -84,6 +86,6 @@ const Education = () => {
     </Box>
 
     )
-};
+});
 
 export default Education;
