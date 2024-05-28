@@ -5,10 +5,10 @@ import eCommerce from '../img/eCommerce.jpg';
 import RestaurantApp from "../img/RestaurantApp.png";
 import Pokedex from "../img/Pokedex.png";
 import EmotonialLink from"../img/EmotonialLink.png";
-import ToDoList from "../img/ToDoList.png"
-import Blog from "../img/Blog.png"
+import ToDoList from "../img/ToDoList.png";
+import Blog from "../img/Blog.png";
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaBootstrap, FaGitAlt, FaGithub, FaTrain, FaMoneyCheckAlt, FaChartBar } from 'react-icons/fa';
-import { SiMui, SiExpress, SiJsonwebtokens} from 'react-icons/si';
+import { SiMui, SiExpress, SiJsonwebtokens, SiMongodb, SiFirebase } from 'react-icons/si';
 import { RiToolsLine } from 'react-icons/ri';
 
 const Proyects = () => {
@@ -53,12 +53,14 @@ const Proyects = () => {
                         repo="https://github.com/JuanPabloSQ/Proyecto-5"
                         link="https://juanpablosq.github.io/Proyecto-5/#/"
                         icons={[
-                            { Component: FaReact, props: { size: 30, color: "#61DAFB" } },
-                            { Component: FaJsSquare, props: { size: 30, color: "#F7DF1E" } },
-                            { Component: SiMui, props: { size: 30, color: "#007FFF" } },
-                            { Component: RiToolsLine, props: { size: 30, color: "#F7DF1E" } },
-                            { Component: SiExpress, props: { size: 30,  } },
-                            { Component: SiJsonwebtokens, props: { size: 30,  } },
+                            { Component: FaReact, props: { size: 20, color: "#61DAFB" } },
+                            { Component: FaJsSquare, props: { size: 20, color: "#F7DF1E" } },
+                            { Component: SiMui, props: { size: 20, color: "#007FFF" } },
+                            { Component: RiToolsLine, props: { size: 20, color: "#F7DF1E" } },
+                            { Component: SiExpress, props: { size: 20 } },
+                            { Component: SiJsonwebtokens, props: { size: 20 } },
+                            { Component: FaMoneyCheckAlt, props: { size: 20, color: "#00BFFF" } },  
+                            { Component: SiMongodb, props: { size: 20, color: "#47A248" } },  
                         ]}
                     />
                     <BasicCard
@@ -71,7 +73,8 @@ const Proyects = () => {
                             { Component: FaReact, props: { size: 30, color: "#61DAFB" } },
                             { Component: FaJsSquare, props: { size: 30, color: "#F7DF1E" } },
                             { Component: SiMui, props: { size: 30, color: "#007FFF" } },
-                            { Component: RiToolsLine, props: { size: 30, color: "#F7DF1E" } }
+                            { Component: RiToolsLine, props: { size: 30, color: "#F7DF1E" } },
+                            { Component: SiFirebase, props: { size: 30, color: "#FFCA28" } }  // Firebase
                         ]}
                     />
                     <BasicCard
