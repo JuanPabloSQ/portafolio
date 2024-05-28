@@ -1,4 +1,5 @@
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaBootstrap, FaGitAlt, FaGithub, FaTrain, FaMoneyCheckAlt, FaChartBar, } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaBootstrap, FaGitAlt, FaGithub, FaTrain, FaMoneyCheckAlt, FaChartBar } from 'react-icons/fa';
 import { SiMui, SiExpress, SiJsonwebtokens, SiVercel, SiMongodb, SiFirebase } from 'react-icons/si';
 import { RiToolsLine } from 'react-icons/ri';
 import Box from '@mui/material/Box';
@@ -6,20 +7,20 @@ import Typography from '@mui/material/Typography';
 import { forwardRef } from 'react';
 
 const Skills = forwardRef((props, ref) => {
-    return(
+    return (
         <Box
             ref={ref}
             sx={{
-                width: '70%', 
-                maxWidth: '1000px', 
+                width: '70%',
+                maxWidth: '1000px',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'flex-start',
                 padding: 2,
-                textAlign: 'center', 
+                textAlign: 'center',
                 margin: 'auto',
-                mt:10
+                mt: 10
             }}
         >
             <Box
@@ -50,18 +51,22 @@ const Skills = forwardRef((props, ref) => {
                         mt: 2,
                     }}
                 >
-                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <FaHtml5 size={50} color="#E34F26" />
-                        <Typography variant="body1" sx={{ mt: 1 }}>HTML</Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <FaCss3Alt size={50} color="#1572B6" />
-                        <Typography variant="body1" sx={{ mt: 1 }}>CSS</Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <FaJsSquare size={50} color="#F7DF1E" />
-                        <Typography variant="body1" sx={{ mt: 1 }}>JavaScript</Typography>
-                    </Box>
+                    {[{ Icon: FaHtml5, color: "#E34F26", label: "HTML", delay: 0.5 },
+                      { Icon: FaCss3Alt, color: "#1572B6", label: "CSS", delay: 1 },
+                      { Icon: FaJsSquare, color: "#F7DF1E", label: "JavaScript", delay: 1.5 }]
+                      .map(({ Icon, color, label, delay }) => (
+                        <motion.div
+                            key={label}
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay, duration: 0.5 }}
+                        >
+                            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                                <Icon size={50} color={color} />
+                                <Typography variant="body1" sx={{ mt: 1 }}>{label}</Typography>
+                            </Box>
+                        </motion.div>
+                    ))}
                 </Box>
 
                 <Typography variant="h5" gutterBottom sx={{ color: 'SkyBlue', mt: 4 }}>
@@ -77,30 +82,25 @@ const Skills = forwardRef((props, ref) => {
                         mt: 2,
                     }}
                 >
-                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <FaReact size={50} color="#61DAFB" />
-                        <Typography variant="body1" sx={{ mt: 1 }}>React</Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <SiMui size={50} color="#007FFF" />
-                        <Typography variant="body1" sx={{ mt: 1 }}>Material-UI</Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <FaBootstrap size={50} color="#7952B3" />
-                        <Typography variant="body1" sx={{ mt: 1 }}>Bootstrap</Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <RiToolsLine size={50} color="#F7DF1E" />
-                        <Typography variant="body1" sx={{ mt: 1 }}>Yup</Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                        <SiExpress size={50} />
-                        <Typography variant="body1" sx={{ mt: 1 }}>Express</Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                        <SiJsonwebtokens size={50} />
-                        <Typography variant="body1" sx={{ mt: 1 }}>JWT</Typography>
-                    </Box>
+                    {[{ Icon: FaReact, color: "#61DAFB", label: "React", delay: 0.5 },
+                      { Icon: SiMui, color: "#007FFF", label: "Material-UI", delay: 1 },
+                      { Icon: FaBootstrap, color: "#7952B3", label: "Bootstrap", delay: 1.5 },
+                      { Icon: RiToolsLine, color: "#F7DF1E", label: "Yup", delay: 2 },
+                      { Icon: SiExpress, label: "Express", delay: 2.5 },
+                      { Icon: SiJsonwebtokens, label: "JWT", delay: 3 }]
+                      .map(({ Icon, color, label, delay }) => (
+                        <motion.div
+                            key={label}
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay, duration: 0.5 }}
+                        >
+                            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                                <Icon size={50} color={color} />
+                                <Typography variant="body1" sx={{ mt: 1 }}>{label}</Typography>
+                            </Box>
+                        </motion.div>
+                    ))}
                 </Box>
 
                 <Typography variant="h5" gutterBottom sx={{ color: 'SkyBlue', mt: 4 }}>
@@ -116,14 +116,21 @@ const Skills = forwardRef((props, ref) => {
                         mt: 2,
                     }}
                 >
-                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <SiMongodb size={50} color="#47A248" />
-                        <Typography variant="body1" sx={{ mt: 1 }}>MongoDB</Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <SiFirebase size={50} color="#FFCA28" />
-                        <Typography variant="body1" sx={{ mt: 1 }}>Firebase</Typography>
-                    </Box>
+                    {[{ Icon: SiMongodb, color: "#47A248", label: "MongoDB", delay: 0.5 },
+                      { Icon: SiFirebase, color: "#FFCA28", label: "Firebase", delay: 1 }]
+                      .map(({ Icon, color, label, delay }) => (
+                        <motion.div
+                            key={label}
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay, duration: 0.5 }}
+                        >
+                            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                                <Icon size={50} color={color} />
+                                <Typography variant="body1" sx={{ mt: 1 }}>{label}</Typography>
+                            </Box>
+                        </motion.div>
+                    ))}
                 </Box>
 
                 <Typography variant="h5" gutterBottom sx={{ color: 'SkyBlue', mt: 4 }}>
@@ -139,32 +146,27 @@ const Skills = forwardRef((props, ref) => {
                         mt: 2,
                     }}
                 >
-                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <FaGitAlt size={50} color="#F05032" />
-                        <Typography variant="body1" sx={{ mt: 1 }}>Git</Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <FaGithub size={50} />
-                        <Typography variant="body1" sx={{ mt: 1 }}>GitHub</Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <SiVercel size={50} />
-                        <Typography variant="body1" sx={{ mt: 1 }}>Vercel</Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <FaTrain size={50} color="#007FFF" />
-                        <Typography variant="body1" sx={{ mt: 1 }}>Railway</Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <FaMoneyCheckAlt size={50} color="#00BFFF" />
-                        <Typography variant="body1" sx={{ mt: 1 }}>MercadoPago</Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <FaChartBar size={50} color="#FFD700" />
-                        <Typography variant="body1" sx={{ mt: 1 }}>Charts</Typography>
-                    </Box>
+                    {[{ Icon: FaGitAlt, color: "#F05032", label: "Git", delay: 0.5 },
+                      { Icon: FaGithub, label: "GitHub", delay: 1 },
+                      { Icon: SiVercel, label: "Vercel", delay: 1.5 },
+                      { Icon: FaTrain, color: "#007FFF", label: "Railway", delay: 2 },
+                      { Icon: FaMoneyCheckAlt, color: "#00BFFF", label: "MercadoPago", delay: 2.5 },
+                      { Icon: FaChartBar, color: "#FFD700", label: "Charts", delay: 3 }]
+                      .map(({ Icon, color, label, delay }) => (
+                        <motion.div
+                            key={label}
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay, duration: 0.5 }}
+                        >
+                            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                                <Icon size={50} color={color} />
+                                <Typography variant="body1" sx={{ mt: 1 }}>{label}</Typography>
+                            </Box>
+                        </motion.div>
+                    ))}
                 </Box>
-            </Box>           
+            </Box>
         </Box>
     )
 });
