@@ -8,14 +8,24 @@ import { IconButton } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkIcon from '@mui/icons-material/Link';
 
-const BasicCard = ({ title, body, imagen, repo, link, icons }) => { 
+const BasicCard = ({ title, body, imagen, repo, link, icons }) => {
   return (
-    <Card sx={{ width: 300, margin: 4 }}>
+    <Card
+      sx={{
+        width: 300,
+        margin: 4,
+        position: 'relative',
+        '&:hover': {
+          boxShadow: '0 0 20px 5px rgba(0, 255, 0, 0.6)',
+        },
+        transition: 'box-shadow 0.3s ease-in-out',
+      }}
+    >
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image={imagen} 
+          image={imagen}
           alt="project image"
         />
         <CardContent>
@@ -44,6 +54,6 @@ const BasicCard = ({ title, body, imagen, repo, link, icons }) => {
       </CardActions>
     </Card>
   );
-}
+};
 
 export default BasicCard;

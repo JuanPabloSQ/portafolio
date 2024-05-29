@@ -1,9 +1,10 @@
-import { blueGrey, lightBlue} from '@mui/material/colors';
+import { blueGrey, lightBlue } from '@mui/material/colors';
 
+const green = '#00FF00'; // Color verde brillante
 
 const baseTheme = {
   primary: {
-    main: lightBlue[50],
+    main: green,
   },
   secondary: {
     main: blueGrey[50],
@@ -17,7 +18,7 @@ const getTheme = (mode) => ({
     ...(mode === 'light'
       ? {
         primary: {
-          main: blueGrey[900],
+          main: green,
         },
         secondary: {
           main: blueGrey[900],
@@ -25,6 +26,12 @@ const getTheme = (mode) => ({
         // palette values for light mode
       }
       : {
+        primary: {
+          main: green,
+        },
+        secondary: {
+          main: blueGrey[50],
+        },
         // palette values for dark mode
       }),
   },
