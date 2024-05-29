@@ -5,11 +5,11 @@ import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import { useTheme } from '@mui/material/styles';
 import { forwardRef } from 'react';
-import img from '../img/img.jpg';
+import img from '../img/img.webp'; 
 
 const Intro = forwardRef((props, ref) => {
     const theme = useTheme();
-    
+
     return (
         <Box
             ref={ref}
@@ -46,7 +46,7 @@ const Intro = forwardRef((props, ref) => {
                         <LocalPhoneIcon /> Tef: +56 979 009 008
                     </Typography>
                 </Box>
-                <Avatar alt="JPSQ" src={img} sx={{ width: 300, height: 300 }} />
+                <Avatar alt="JPSQ" src={img} sx={{ width: 300, height: 300 }} loading="lazy" />
             </Box>
             <Button
                 variant="contained"

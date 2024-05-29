@@ -2,7 +2,7 @@ import { motion, useAnimation } from 'framer-motion';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { forwardRef, useEffect } from 'react';
-import EmotonialLink from '../img/EmotonialLink.png';
+import EmotonialLink from '../img/EmotonialLink.webp';
 import BasicCard from '../components/BasicCard';
 import { FaReact, FaJsSquare } from 'react-icons/fa';
 import { SiMui } from 'react-icons/si';
