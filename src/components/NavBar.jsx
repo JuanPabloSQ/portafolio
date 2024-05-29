@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 
-export default function NavBar({ introRef, aboutRef, skillsRef, proyectsRef,contactRef, educationRef, }) {
+export default function NavBar({ introRef, aboutRef, skillsRef, proyectsRef,contactRef, educationRef,recognitionRef }) {
   const scrollToSection = (ref) => {
     if (ref.current) {
       window.scrollTo({
@@ -23,6 +23,7 @@ export default function NavBar({ introRef, aboutRef, skillsRef, proyectsRef,cont
           <Button color="inherit" onClick={() => scrollToSection(skillsRef)}>SKILLS</Button>
           <Button color="inherit" onClick={() => scrollToSection(proyectsRef)}>PROYECTOS</Button>
           <Button color="inherit" onClick={() => scrollToSection(educationRef)}>EDUCACION</Button>
+          <Button color="inherit" onClick={() => scrollToSection(recognitionRef)}>RECONOCIMIENTOS</Button>
           <Button color="inherit" onClick={() => scrollToSection(contactRef)}>CONTACTO</Button>
         </Toolbar>
       </AppBar>

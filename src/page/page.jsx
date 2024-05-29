@@ -6,6 +6,7 @@ import Skills from "./Skills";
 import Proyects from './Proyects';
 import Education from "./Education";
 import Contact from "./Contact";
+import Recognition from './Recognition';
 
 const Page = () => {
     const introRef = useRef(null);
@@ -13,6 +14,7 @@ const Page = () => {
     const skillsRef = useRef(null);
     const proyectsRef = useRef(null);
     const educationRef = useRef(null);
+    const recognitionRef = useRef(null);
     const contactRef = useRef(null);
 
     return (
@@ -22,13 +24,15 @@ const Page = () => {
                     skillsRef={skillsRef}
                     proyectsRef={proyectsRef}
                     educationRef={educationRef} 
-                    contactRef={contactRef} 
+                    contactRef={contactRef}
+                    recognitionRef={recognitionRef}
             />
             <Intro ref={introRef}/>
             <AboutMe ref={aboutRef} />
             <Skills ref={skillsRef}/>
             <Proyects ref={proyectsRef}/>
             <Education ref={educationRef}/>
+            <Recognition ref={recognitionRef}/>
             <Contact ref={contactRef} />
         </div>
     );

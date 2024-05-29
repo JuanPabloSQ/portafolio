@@ -2,8 +2,12 @@ import { motion, useAnimation } from 'framer-motion';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { forwardRef, useEffect } from 'react';
+import EmotonialLink from '../img/EmotonialLink.png';
+import BasicCard from '../components/BasicCard';
+import { FaReact, FaJsSquare } from 'react-icons/fa';
+import { SiMui } from 'react-icons/si';
 
-const AboutMe = forwardRef((props, ref) => {
+const Recognition = forwardRef((props, ref) => {
     const controls = useAnimation();
 
     useEffect(() => {
@@ -57,31 +61,31 @@ const AboutMe = forwardRef((props, ref) => {
                         padding: 2,
                     }}
                 >
-                    <Typography variant="h2" gutterBottom sx={{ color:  'SkyBlue' }}>
-                        SOBRE MI
+                    <Typography variant="h2" gutterBottom sx={{ color: 'SkyBlue' }}>
+                        RECONOCIMIENTOS
                     </Typography>
-                    <Typography variant="body1" gutterBottom>
-                        Soy desarrollador web full stack con experiencia en diversos proyectos. Me apasionan los desafíos innovadores y busco constantemente expandir mis habilidades. Además, tengo una segunda carrera en enfermería. Esta formación me ha proporcionado habilidades blandas esenciales como la comunicación efectiva, el trabajo en equipo y la resolución de problemas en situaciones de alta presión.
+                    <Typography variant="h5" gutterBottom>
+                        HACKATHON HEALTHY GAMER
                     </Typography>
-                    <Typography variant="body1" gutterBottom sx={{ textTransform: 'uppercase', fontWeight: 'bold', fontSize: '1.2rem', color: 'SkyBlue' }}>
-                        Actualmente estoy buscando una nueva oportunidad laboral, cuento con experiencia tanto en frontend como backend en el desarrollo web.
+                    <Typography variant="h6" gutterBottom>
+                        Equipo ganador de la primera hackaton realizada por el equipo de desarollo de HEALTHY GAMER
                     </Typography>
-                    <Typography variant="body1" gutterBottom>
-                        Si quieres contactarte conmigo puedes escribirme a{' '}
-                        <Typography variant="body1" component="span" sx={{ color: 'skyblue' }}>
-                            jp.sherka@gmail.com
-                        </Typography>
-                    </Typography>
-                    <Typography variant="body1" gutterBottom>
-                        Mira mi experiencia laboral en{' '}
-                        <Typography variant="body1" component="span" sx={{ color: 'skyblue' }}>
-                            LinkedIn
-                        </Typography>
-                    </Typography>
+                    <BasicCard
+                        title="EmotonialLink"
+                        body="App web para registro de eventos y emociones por medio de nodos"
+                        imagen={EmotonialLink}
+                        repo="https://github.com/alfredo-baquedano/emotion-linking"
+                        link="https://alfredo-baquedano.github.io/emotion-linking/"
+                        icons={[
+                            { Component: FaReact, props: { size: 30, color: "#61DAFB" } },
+                            { Component: FaJsSquare, props: { size: 30, color: "#F7DF1E" } },
+                            { Component: SiMui, props: { size: 30, color: "#007FFF" } },
+                        ]}
+                    />
                 </Box>
             </Box>
         </motion.div>
     );
 });
 
-export default AboutMe;
+export default Recognition;
