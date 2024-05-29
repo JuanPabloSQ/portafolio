@@ -67,7 +67,7 @@ const Recognition = forwardRef((props, ref) => {
                         gutterBottom
                         sx={{ 
                             color: '#228B22',
-                            fontSize: { xs: '2rem', md: '3rem' } // Ajuste del tamaño del texto para dispositivos móviles y más grandes
+                            fontSize: { xs: '2rem', md: '3rem' } 
                         }}
                     >
                         RECONOCIMIENTOS

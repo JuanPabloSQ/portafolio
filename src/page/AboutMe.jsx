@@ -1,7 +1,7 @@
 import { motion, useAnimation } from 'framer-motion';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link'; // Importar Link
+import Link from '@mui/material/Link'; 
 import { forwardRef, useEffect } from 'react';
 import { useTheme } from '@mui/material/styles';
 
