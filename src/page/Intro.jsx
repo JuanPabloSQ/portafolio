@@ -1,17 +1,15 @@
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import img from '../img/img.jpg';
+import { Typography, Box, Avatar, Button, IconButton } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { IconButton } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import { useTheme } from '@mui/material/styles';
 import { forwardRef } from 'react';
-
+import img from '../img/img.jpg';
 
 const Intro = forwardRef((props, ref) => {
+    const theme = useTheme();
+    
     return (
         <Box
             ref={ref}
@@ -38,32 +36,32 @@ const Intro = forwardRef((props, ref) => {
                     <Typography variant="h2" gutterBottom>
                         Juan Pablo Sepúlveda Q.
                     </Typography>
-                    <Typography variant="h4" gutterBottom>
+                    <Typography variant="h4" gutterBottom sx={{ color: theme.palette.primary.main }}>
                         Desarrollador Full-Stack 
                     </Typography>
                     <Typography variant="h5" gutterBottom>
-                        <EmailIcon/> Email: jp.sherka@gmail.com
+                        <EmailIcon /> Email: jp.sherka@gmail.com
                     </Typography>
                     <Typography variant="h5" gutterBottom>
-                        <LocalPhoneIcon/> Tef: +56 979 009 008
+                        <LocalPhoneIcon /> Tef: +56 979 009 008
                     </Typography>
                 </Box>
                 <Avatar alt="JPSQ" src={img} sx={{ width: 300, height: 300 }} />
             </Box>
             <Button
                 variant="contained"
-                color="primary" 
+                color="primary"
                 href="/resume.pdf"
                 download
             >
                 <Typography variant='h5'> Curriculum </Typography>
             </Button>
-            <Box sx={{display:"flex", flexDirection:"row", mt: 2}}>
+            <Box sx={{ display: "flex", flexDirection: "row", mt: 2 }}>
                 <IconButton href="https://www.linkedin.com/in/jpsq/" target="_blank">
                     <LinkedInIcon />
                 </IconButton>
                 <IconButton href="https://github.com/JuanPabloSQ" target="_blank">
-                    <GitHubIcon/>
+                    <GitHubIcon />
                 </IconButton>
             </Box>
         </Box>

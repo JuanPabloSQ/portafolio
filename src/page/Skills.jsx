@@ -88,13 +88,13 @@ const Skills = forwardRef((props, ref) => {
                     padding: 2,
                 }}
             >
-                <Typography variant="h2" gutterBottom sx={{ color: 'SkyBlue' }}>
+                <Typography variant="h2" gutterBottom sx={{ color: '#228B22' }}>
                     HABILIDADES TECNICAS
                 </Typography>
 
                 {skillsData.map(({ category, skills }) => (
                     <Box key={category}>
-                        <Typography variant="h5" gutterBottom sx={{ color: 'SkyBlue', mt: 4 }}>
+                        <Typography variant="h5" gutterBottom sx={{ color: '#228B22', mt: 4 }}>
                             {category}
                         </Typography>
                         <Box

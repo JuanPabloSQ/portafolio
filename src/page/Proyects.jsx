@@ -137,7 +137,7 @@ const Proyects = forwardRef((props, ref) => {
                     padding: 2,
                 }}
             >
-                <Typography variant="h2" gutterBottom sx={{ color: 'SkyBlue' }}>
+                <Typography variant="h2" gutterBottom sx={{ color: '#228B22'  }}>
                     PROYECTOS
                 </Typography>
                 <Box

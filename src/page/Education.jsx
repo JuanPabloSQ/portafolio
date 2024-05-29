@@ -59,7 +59,7 @@ const Education = forwardRef((props, ref) => {
                         padding: 2,
                     }}
                 >   
-                    <Typography variant="h2" gutterBottom sx={{ color: 'SkyBlue' }}>
+                    <Typography variant="h2" gutterBottom sx={{ color: '#228B22'  }}>
                         EDUCACÍON
                     </Typography>
                     <Box>
@@ -71,7 +71,7 @@ const Education = forwardRef((props, ref) => {
                         </Typography>
                         <Button
                             variant="contained"
-                            color="info"
+                            color="primary"
                             href="/resume.pdf"
                             download
                         >
@@ -87,7 +87,7 @@ const Education = forwardRef((props, ref) => {
                         </Typography>
                         <Button
                             variant="contained"
-                            color="info"
+                            color="primary"
                             href="/resume.pdf"
                             download
                         >
@@ -103,7 +103,7 @@ const Education = forwardRef((props, ref) => {
                         </Typography>
                         <Button
                             variant="contained"
-                            color="info"
+                            color="primary"
                             href="/resume.pdf"
                             download
                         >

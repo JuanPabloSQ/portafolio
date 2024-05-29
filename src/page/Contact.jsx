@@ -3,8 +3,11 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import { Email, Phone, LinkedIn, GitHub } from '@mui/icons-material';
+import { useTheme } from '@mui/material/styles'; 
 
 const Contact = forwardRef((props, ref) => {
+  const theme = useTheme(); 
+
   return (
     <Box
       ref={ref}
@@ -32,36 +35,36 @@ const Contact = forwardRef((props, ref) => {
           padding: 2,
         }}
       >
-        <Typography variant="h2" gutterBottom sx={{ color: 'SkyBlue' }}>
+        <Typography variant="h2" gutterBottom sx={{ color: '#228B22' }}>
           CONTACTAME
         </Typography>
 
         <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', mt: 2 }}>
-          <Email sx={{ color: 'SkyBlue', mr: 1 }} />
+          <Email sx={{ color: theme.palette.primary.main, mr: 1 }} />
           <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
             Mi correo:
           </Typography>
           <Box sx={{ pl: 2 }}>
-            <Typography variant="body1" sx={{ color: 'SkyBlue', fontSize: '1.2rem' }}>
+            <Typography variant="body1" sx={{ color: theme.palette.primary.main, fontSize: '1.2rem' }}>
               jp.sherka@gmail.com
             </Typography>
           </Box>
         </Box>
 
         <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', mt: 2 }}>
-          <Phone sx={{ color: 'SkyBlue', mr: 1 }} />
+          <Phone sx={{ color: theme.palette.primary.main, mr: 1 }} />
           <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
             Mi telefono:
           </Typography>
           <Box sx={{ pl: 2 }}>
-            <Typography variant="body1" sx={{ color: 'SkyBlue', fontSize: '1.2rem' }}>
+            <Typography variant="body1" sx={{ color: theme.palette.primary.main, fontSize: '1.2rem' }}>
               +56 979 009 008
             </Typography>
           </Box>
         </Box>
 
         <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', mt: 2 }}>
-          <LinkedIn sx={{ color: 'SkyBlue', mr: 1 }} />
+          <LinkedIn sx={{ color: theme.palette.primary.main, mr: 1 }} />
           <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
             Mi LinkedIn:
           </Typography>
@@ -73,7 +76,7 @@ const Contact = forwardRef((props, ref) => {
         </Box>
 
         <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', mt: 2 }}>
-          <GitHub sx={{ color: 'SkyBlue', mr: 1 }} />
+          <GitHub sx={{ color: theme.palette.primary.main, mr: 1 }} />
           <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
             Mi GitHub:
           </Typography>
@@ -89,4 +92,3 @@ const Contact = forwardRef((props, ref) => {
 });
 
 export default Contact;
-
