@@ -21,7 +21,7 @@ export default function NavBar({ introRef, aboutRef, skillsRef, proyectsRef, con
         top: ref.current.offsetTop - 80,
         behavior: 'smooth',
       });
-      setDrawerOpen(false); // Close drawer when clicking on a menu item
+      setDrawerOpen(false); 
     }
   };
 
@@ -44,7 +44,7 @@ export default function NavBar({ introRef, aboutRef, skillsRef, proyectsRef, con
 
   const drawerList = () => (
     <Box
-      sx={{ width: 250 }}
+      sx={{ width: 200 }}
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
