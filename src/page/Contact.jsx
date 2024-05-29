@@ -28,10 +28,10 @@ const Contact = forwardRef((props, ref) => {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          alignItems: { xs: 'center', md: 'flex-start' },  // Ajuste aquí
+          alignItems: { xs: 'center', md: 'flex-start' }, 
           justifyContent: 'flex-start',
           minHeight: '100vh',
-          textAlign: { xs: 'center', md: 'start' },  // Ajuste aquí
+          textAlign: { xs: 'center', md: 'start' },  
           padding: { xs: 1, md: 2 },
         }}
       >

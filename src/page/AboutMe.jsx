@@ -1,6 +1,7 @@
 import { motion, useAnimation } from 'framer-motion';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import Link from '@mui/material/Link'; // Importar Link
 import { forwardRef, useEffect } from 'react';
 import { useTheme } from '@mui/material/styles';
 
@@ -19,7 +20,7 @@ const AboutMe = forwardRef((props, ref) => {
                     }
                 });
             },
-            { threshold: 0.5 } 
+            { threshold: 0.5 }
         );
 
         if (ref.current) {
@@ -51,7 +52,7 @@ const AboutMe = forwardRef((props, ref) => {
                     padding: { xs: 1, md: 2 },
                     textAlign: 'center',
                     margin: 'auto',
-                    mt: { xs: '56px', md: '64px' },  // Ajuste para compensar la altura de la AppBar
+                    mt: { xs: '56px', md: '64px' },
                 }}
             >
                 <Box
@@ -82,9 +83,9 @@ const AboutMe = forwardRef((props, ref) => {
                     </Typography>
                     <Typography variant="body1" gutterBottom>
                         Mira mi experiencia laboral en{' '}
-                        <Typography variant="body1" component="span" sx={{ color: theme.palette.primary.main }}>
+                        <Link href="https://www.linkedin.com/in/jpsq/" target="_blank" sx={{ fontSize: '1.2rem', color: theme.palette.primary.main }}>
                             LinkedIn
-                        </Typography>
+                        </Link>
                     </Typography>
                 </Box>
             </Box>
