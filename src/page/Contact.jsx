@@ -30,7 +30,7 @@ const Contact = forwardRef((props, ref) => {
           flexDirection: 'column',
           alignItems: { xs: 'center', md: 'flex-start' }, 
           justifyContent: 'flex-start',
-          minHeight: '100vh',
+          minHeight: '80vh',
           textAlign: { xs: 'center', md: 'start' },  
           padding: { xs: 1, md: 2 },
         }}

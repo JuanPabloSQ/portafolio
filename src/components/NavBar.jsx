@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -10,6 +10,8 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import { useTheme } from '@mui/material/styles';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 export default function NavBar({ introRef, aboutRef, skillsRef, proyectsRef, contactRef, educationRef, recognitionRef }) {
   const theme = useTheme();
@@ -71,8 +73,21 @@ export default function NavBar({ introRef, aboutRef, skillsRef, proyectsRef, con
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed">
+      <AppBar
+        position="fixed"
+        sx={{
+          top: '10px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          borderRadius: '20px',
+          width: { xs: '90%', sm: '61%' },
+          boxShadow: theme.shadows[5],
+          backgroundColor: theme.palette.background.paper,
+          color: theme.palette.text.primary,
+        }}
+      >
         <Toolbar>
+          <ChevronLeftIcon sx={{ display: { xs: 'none', sm: 'block' }, mr: 2 }} />
           <IconButton
             edge="start"
             color="inherit"
@@ -105,6 +120,27 @@ export default function NavBar({ introRef, aboutRef, skillsRef, proyectsRef, con
                 {item.label}
               </Button>
             ))}
+          </Box>
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <Button
+              sx={{
+                color: "white",
+                display: { xs: 'none', sm: 'block' },
+                minWidth: 0,
+                padding: 0,
+                ml: 2,
+                mr: 0,  
+                pointerEvents: 'none',  
+                cursor: 'default',  
+                '&:hover': {
+                  backgroundColor: 'transparent',
+                },
+              }}
+              disableRipple
+            >
+              /
+            </Button>
+            <ChevronRightIcon sx={{ display: { xs: 'none', sm: 'block' }, ml: 0 }} />  
           </Box>
         </Toolbar>
       </AppBar>
