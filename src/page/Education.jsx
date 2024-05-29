@@ -13,7 +13,7 @@ const Education = forwardRef((props, ref) => {
             const sectionBottom = sectionTop + ref.current.offsetHeight;
             const scrollPosition = window.scrollY + window.innerHeight;
 
-            if (scrollPosition > sectionTop && scrollPosition < sectionBottom) {
+            if ((window.scrollY >= sectionTop && window.scrollY < sectionBottom) || (scrollPosition > sectionTop && scrollPosition <= sectionBottom)) {
                 controls.start({ opacity: 1, y: 0 });
             } else {
                 controls.start({ opacity: 0, y: 50 });
@@ -36,16 +36,17 @@ const Education = forwardRef((props, ref) => {
         >
             <Box
                 sx={{
-                    width: '70%', 
-                    maxWidth: '1000px', 
+                    width: { xs: '90%', md: '70%' },
+                    maxWidth: '1000px',
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'flex-start',
-                    padding: 2,
-                    textAlign: 'center', 
+                    padding: { xs: 1, md: 2 },
+                    textAlign: 'center',
                     margin: 'auto',
-                    mt: 30
+                    mt: 10,
+                    mb: 20,
                 }}
             >
                 <Box
@@ -56,18 +57,18 @@ const Education = forwardRef((props, ref) => {
                         justifyContent: 'flex-start',
                         minHeight: '100vh',
                         textAlign: 'start',
-                        padding: 2,
+                        padding: { xs: 1, md: 2 },
                     }}
                 >   
                     <Typography variant="h2" gutterBottom sx={{ color: '#228B22'  }}>
-                        EDUCACÍON
+                        EDUCACIÓN
                     </Typography>
-                    <Box>
+                    <Box sx={{ mb: 6 }}>
                         <Typography variant="h5" gutterBottom>
-                            BOOTCAMP UDD DESAROLLO WEB FULL-STACK
+                            BOOTCAMP UDD DESARROLLO WEB FULL-STACK
                         </Typography>
                         <Typography variant="h6" gutterBottom>
-                            Universidad del Desarollo 
+                            Universidad del Desarrollo 
                         </Typography>
                         <Button
                             variant="contained"
@@ -78,7 +79,7 @@ const Education = forwardRef((props, ref) => {
                             <Typography variant='h6'> Certificado </Typography>
                         </Button>
                     </Box>
-                    <Box sx={{ mt: 10 }}>
+                    <Box sx={{ mb: 6 }}>
                         <Typography variant="h5" gutterBottom>
                             METODOLOGÍAS ÁGILES
                         </Typography>
@@ -94,7 +95,7 @@ const Education = forwardRef((props, ref) => {
                             <Typography variant='h6'> Certificado </Typography>
                         </Button>
                     </Box>
-                    <Box sx={{ mt: 10 }}>
+                    <Box sx={{ mb: 6 }}>
                         <Typography variant="h5" gutterBottom>
                             CURSO DE JAVASCRIPT, HTML, CSS Y NODEJS 
                         </Typography>
@@ -111,7 +112,7 @@ const Education = forwardRef((props, ref) => {
                         </Button>
                     </Box>
                 </Box>
-            </Box>
+            </Box >
         </motion.div>
     );
 });

@@ -1,4 +1,4 @@
-import Page from "./page/Page"
+import Page from "./page/page"
 import { ThemeContextProvider } from "./context/ThemeContext"
 
 

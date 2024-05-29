@@ -18,7 +18,7 @@ const Proyects = forwardRef((props, ref) => {
     const controls = useAnimation();
     const { ref: inViewRef, inView } = useInView({
         triggerOnce: true, 
-        threshold: 0.4 
+        threshold: 0.2 
     });
 
     useEffect(() => {
@@ -113,16 +113,17 @@ const Proyects = forwardRef((props, ref) => {
         <Box
             ref={ref}
             sx={{
-                width: '70%',
+                width: { xs: '90%', md: '70%' },
                 maxWidth: '1000px',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'flex-start',
-                padding: 2,
+                padding: { xs: 1, md: 2 },
                 textAlign: 'center',
                 margin: 'auto',
-                mt: 30
+                mt: 10,
+                mb: 10,
             }}
         >
             <Box
@@ -134,7 +135,7 @@ const Proyects = forwardRef((props, ref) => {
                     justifyContent: 'flex-start',
                     minHeight: '100vh',
                     textAlign: 'start',
-                    padding: 2,
+                    padding: { xs: 1, md: 2 },
                 }}
             >
                 <Typography variant="h2" gutterBottom sx={{ color: '#228B22'  }}>
@@ -143,7 +144,7 @@ const Proyects = forwardRef((props, ref) => {
                 <Box
                     sx={{
                         display: 'grid',
-                        gridTemplateColumns: 'repeat(3, 1fr)',
+                        gridTemplateColumns: { xs: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' },
                         gap: 3,
                         justifyContent: 'center'
                     }}

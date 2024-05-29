@@ -16,7 +16,7 @@ const Recognition = forwardRef((props, ref) => {
             const sectionBottom = sectionTop + ref.current.offsetHeight;
             const scrollPosition = window.scrollY + window.innerHeight;
 
-            if (scrollPosition > sectionTop && scrollPosition < sectionBottom) {
+            if ((window.scrollY >= sectionTop && window.scrollY < sectionBottom) || (scrollPosition > sectionTop && scrollPosition <= sectionBottom)) {
                 controls.start({ opacity: 1, y: 0 });
             } else {
                 controls.start({ opacity: 0, y: 50 });
@@ -39,15 +39,16 @@ const Recognition = forwardRef((props, ref) => {
         >
             <Box
                 sx={{
-                    width: '70%', 
-                    maxWidth: '1000px', 
+                    width: { xs: '90%', md: '70%' },
+                    maxWidth: '1000px',
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'flex-start',
-                    padding: 2,
-                    textAlign: 'center', 
+                    padding: { xs: 1, md: 2 },
+                    textAlign: 'center',
                     margin: 'auto',
+                    mt: 10,
                 }}
             >
                 <Box
@@ -58,30 +59,39 @@ const Recognition = forwardRef((props, ref) => {
                         justifyContent: 'flex-start',
                         minHeight: '100vh',
                         textAlign: 'start',
-                        padding: 2,
+                        padding: { xs: 1, md: 2 },
                     }}
                 >
-                    <Typography variant="h2" gutterBottom sx={{ color: '#228B22' }}>
+                    <Typography
+                        variant="h2"
+                        gutterBottom
+                        sx={{ 
+                            color: '#228B22',
+                            fontSize: { xs: '2rem', md: '3rem' } // Ajuste del tamaño del texto para dispositivos móviles y más grandes
+                        }}
+                    >
                         RECONOCIMIENTOS
                     </Typography>
                     <Typography variant="h5" gutterBottom>
-                        HACKATHON HEALTHY GAMER
+                        1° HACKATHON HEALTHY GAMER
                     </Typography>
                     <Typography variant="h6" gutterBottom>
                         Equipo ganador de la primera hackaton realizada por el equipo de desarollo de HEALTHY GAMER
                     </Typography>
-                    <BasicCard
-                        title="EmotonialLink"
-                        body="App web para registro de eventos y emociones por medio de nodos"
-                        imagen={EmotonialLink}
-                        repo="https://github.com/alfredo-baquedano/emotion-linking"
-                        link="https://alfredo-baquedano.github.io/emotion-linking/"
-                        icons={[
-                            { Component: FaReact, props: { size: 30, color: "#61DAFB" } },
-                            { Component: FaJsSquare, props: { size: 30, color: "#F7DF1E" } },
-                            { Component: SiMui, props: { size: 30, color: "#007FFF" } },
-                        ]}
-                    />
+                    <Box sx={{ width: '100%', mt: 4 }}>
+                        <BasicCard
+                            title="EmotonialLink"
+                            body="App web para registro de eventos y emociones por medio de nodos"
+                            imagen={EmotonialLink}
+                            repo="https://github.com/alfredo-baquedano/emotion-linking"
+                            link="https://alfredo-baquedano.github.io/emotion-linking/"
+                            icons={[
+                                { Component: FaReact, props: { size: 30, color: "#61DAFB" } },
+                                { Component: FaJsSquare, props: { size: 30, color: "#F7DF1E" } },
+                                { Component: SiMui, props: { size: 30, color: "#007FFF" } },
+                            ]}
+                        />
+                    </Box>
                 </Box>
             </Box>
         </motion.div>

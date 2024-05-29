@@ -2,29 +2,34 @@ import { motion, useAnimation } from 'framer-motion';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { forwardRef, useEffect } from 'react';
-import { useTheme } from '@mui/material/styles'; 
+import { useTheme } from '@mui/material/styles';
 
 const AboutMe = forwardRef((props, ref) => {
     const controls = useAnimation();
-    const theme = useTheme(); 
+    const theme = useTheme();
 
     useEffect(() => {
-        const handleScroll = () => {
-            const sectionTop = ref.current.offsetTop;
-            const sectionBottom = sectionTop + ref.current.offsetHeight;
-            const scrollPosition = window.scrollY + window.innerHeight;
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        controls.start({ opacity: 1, y: 0 });
+                    } else {
+                        controls.start({ opacity: 0, y: 50 });
+                    }
+                });
+            },
+            { threshold: 0.5 } 
+        );
 
-            if (scrollPosition > sectionTop && scrollPosition < sectionBottom) {
-                controls.start({ opacity: 1, y: 0 });
-            } else {
-                controls.start({ opacity: 0, y: 50 });
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
 
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
         };
     }, [controls, ref]);
 
@@ -37,15 +42,16 @@ const AboutMe = forwardRef((props, ref) => {
         >
             <Box
                 sx={{
-                    width: '70%', 
-                    maxWidth: '1000px', 
+                    width: { xs: '90%', md: '70%' },
+                    maxWidth: '1000px',
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'flex-start',
-                    padding: 2,
-                    textAlign: 'center', 
+                    padding: { xs: 1, md: 2 },
+                    textAlign: 'center',
                     margin: 'auto',
+                    mt: { xs: '56px', md: '64px' },  // Ajuste para compensar la altura de la AppBar
                 }}
             >
                 <Box
@@ -56,16 +62,16 @@ const AboutMe = forwardRef((props, ref) => {
                         justifyContent: 'flex-start',
                         minHeight: '100vh',
                         textAlign: 'start',
-                        padding: 2,
+                        padding: { xs: 1, md: 2 },
                     }}
                 >
-                    <Typography variant="h2" gutterBottom sx={{ color:  '#228B22' }}>
+                    <Typography variant="h2" gutterBottom sx={{ color: '#228B22' }}>
                         SOBRE MI
                     </Typography>
                     <Typography variant="body1" gutterBottom>
                         Soy desarrollador web full stack con experiencia en diversos proyectos. Me apasionan los desafíos innovadores y busco constantemente expandir mis habilidades. Además, tengo una segunda carrera en enfermería. Esta formación me ha proporcionado habilidades blandas esenciales como la comunicación efectiva, el trabajo en equipo y la resolución de problemas en situaciones de alta presión.
                     </Typography>
-                    <Typography variant="body1" gutterBottom sx={{ textTransform: 'uppercase', fontWeight: 'bold', fontSize: '1.2rem', color: theme.palette.primary.main  }}>
+                    <Typography variant="body1" gutterBottom sx={{ textTransform: 'uppercase', fontWeight: 'bold', fontSize: '1.2rem', color: theme.palette.primary.main }}>
                         Actualmente estoy buscando una nueva oportunidad laboral, cuento con experiencia tanto en frontend como backend en el desarrollo web.
                     </Typography>
                     <Typography variant="body1" gutterBottom>
@@ -87,4 +93,3 @@ const AboutMe = forwardRef((props, ref) => {
 });
 
 export default AboutMe;
-

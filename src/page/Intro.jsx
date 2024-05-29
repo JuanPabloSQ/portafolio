@@ -20,12 +20,14 @@ const Intro = forwardRef((props, ref) => {
                 justifyContent: 'center',
                 minHeight: '100vh',
                 padding: 2,
+                textAlign: { xs: 'center', md: 'left' },
+                mt: { xs: '56px', md: '64px' }  // Ajuste para compensar la altura de la AppBar
             }}
         >
             <Box
                 sx={{
                     display: 'flex',
-                    flexDirection: 'row',
+                    flexDirection: { xs: 'column', md: 'row' },
                     alignItems: 'center',
                     justifyContent: 'center',
                     gap: 2,
@@ -46,17 +48,18 @@ const Intro = forwardRef((props, ref) => {
                         <LocalPhoneIcon /> Tef: +56 979 009 008
                     </Typography>
                 </Box>
-                <Avatar alt="JPSQ" src={img} sx={{ width: 300, height: 300 }} />
+                <Avatar alt="JPSQ" src={img} sx={{ width: { xs: 200, md: 300 }, height: { xs: 200, md: 300 } }} />
             </Box>
             <Button
                 variant="contained"
                 color="primary"
                 href="/resume.pdf"
                 download
+                sx={{ mt: { xs: 2, md: 0 } }}
             >
                 <Typography variant='h5'> Curriculum </Typography>
             </Button>
-            <Box sx={{ display: "flex", flexDirection: "row", mt: 2 }}>
+            <Box sx={{ display: "flex", flexDirection: "row", mt: 2, justifyContent: { xs: 'center', md: 'flex-start' } }}>
                 <IconButton href="https://www.linkedin.com/in/jpsq/" target="_blank">
                     <LinkedInIcon />
                 </IconButton>

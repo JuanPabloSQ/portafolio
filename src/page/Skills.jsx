@@ -64,16 +64,16 @@ const Skills = forwardRef((props, ref) => {
         <Box
             ref={ref}
             sx={{
-                width: '70%',
+                width: { xs: '90%', md: '70%' },
                 maxWidth: '1000px',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'flex-start',
-                padding: 2,
+                padding: { xs: 1, md: 2 },
                 textAlign: 'center',
                 margin: 'auto',
-                mt: 10
+                mt: 10,
             }}
         >
             <Box
@@ -85,7 +85,7 @@ const Skills = forwardRef((props, ref) => {
                     justifyContent: 'flex-start',
                     minHeight: '100vh',
                     textAlign: 'start',
-                    padding: 2,
+                    padding: { xs: 1, md: 2 },
                 }}
             >
                 <Typography variant="h2" gutterBottom sx={{ color: '#228B22' }}>
@@ -93,16 +93,14 @@ const Skills = forwardRef((props, ref) => {
                 </Typography>
 
                 {skillsData.map(({ category, skills }) => (
-                    <Box key={category}>
+                    <Box key={category} sx={{ mb: 4 }}>
                         <Typography variant="h5" gutterBottom sx={{ color: '#228B22', mt: 4 }}>
                             {category}
                         </Typography>
                         <Box
                             sx={{
-                                display: 'flex',
-                                flexDirection: 'row',
-                                alignItems: 'center',
-                                justifyContent: 'center',
+                                display: 'grid',
+                                gridTemplateColumns: { xs: 'repeat(2, 1fr)', sm: 'repeat(3, 1fr)', md: 'repeat(4, 1fr)' },
                                 gap: 3,
                                 mt: 2,
                             }}
