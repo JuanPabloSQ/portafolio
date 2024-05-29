@@ -89,7 +89,7 @@ const Education = forwardRef((props, ref) => {
                         <Button
                             variant="contained"
                             color="primary"
-                            href="/resume.pdf"
+                            href="/certificate.pdf"
                             download
                         >
                             <Typography variant='h6'> Certificado </Typography>
@@ -105,7 +105,7 @@ const Education = forwardRef((props, ref) => {
                         <Button
                             variant="contained"
                             color="primary"
-                            href="/resume.pdf"
+                            href="/udemy.pdf"
                             download
                         >
                             <Typography variant='h6'> Certificado </Typography>

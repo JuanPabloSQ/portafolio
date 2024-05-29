@@ -53,7 +53,7 @@ const Intro = forwardRef((props, ref) => {
             <Button
                 variant="contained"
                 color="primary"
-                href="/resume.pdf"
+                href="/Curriculum_vitae.pdf"
                 download
                 sx={{ mt: { xs: 2, md: 0 } }}
             >
