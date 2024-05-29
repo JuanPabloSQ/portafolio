@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import BasicCard from '../components/BasicCard';
@@ -11,9 +11,22 @@ import Blog from "../img/Blog.png";
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaMoneyCheckAlt, FaChartBar } from 'react-icons/fa';
 import { SiMui, SiExpress, SiJsonwebtokens, SiMongodb, SiFirebase } from 'react-icons/si';
 import { RiToolsLine } from 'react-icons/ri';
-import { forwardRef } from 'react';
+import { forwardRef, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 const Proyects = forwardRef((props, ref) => {
+    const controls = useAnimation();
+    const { ref: inViewRef, inView } = useInView({
+        triggerOnce: true, 
+        threshold: 0.4 
+    });
+
+    useEffect(() => {
+        if (inView) {
+            controls.start('visible');
+        }
+    }, [controls, inView]);
+
     const projects = [
         {
             title: "eCommerce",
@@ -43,7 +56,7 @@ const Proyects = forwardRef((props, ref) => {
                 { Component: FaJsSquare, props: { size: 30, color: "#F7DF1E" } },
                 { Component: SiMui, props: { size: 30, color: "#007FFF" } },
                 { Component: RiToolsLine, props: { size: 30, color: "#F7DF1E" } },
-                { Component: SiFirebase, props: { size: 30, color: "#FFCA28" } } // Firebase
+                { Component: SiFirebase, props: { size: 30, color: "#FFCA28" } } 
             ]
         },
         {
@@ -113,6 +126,7 @@ const Proyects = forwardRef((props, ref) => {
             }}
         >
             <Box
+                ref={inViewRef}
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -137,8 +151,12 @@ const Proyects = forwardRef((props, ref) => {
                     {projects.map((project, index) => (
                         <motion.div
                             key={project.title}
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            initial="hidden"
+                            animate={controls}
+                            variants={{
+                                visible: { opacity: 1, y: 0 },
+                                hidden: { opacity: 0, y: 50 }
+                            }}
                             transition={{ delay: index * 0.3, duration: 0.5 }}
                         >
                             <BasicCard
