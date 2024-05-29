@@ -17,7 +17,7 @@ const Contact = forwardRef((props, ref) => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',  // Cambio aquí
+        justifyContent: 'flex-start',
         padding: { xs: 1, md: 2 },
         textAlign: 'center',
         margin: 'auto',
@@ -28,10 +28,10 @@ const Contact = forwardRef((props, ref) => {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          alignItems: 'center', // Cambio aquí
-          justifyContent: 'center', // Cambio aquí
+          alignItems: { xs: 'center', md: 'flex-start' },  // Ajuste aquí
+          justifyContent: 'flex-start',
           minHeight: '100vh',
-          textAlign: 'center', // Cambio aquí
+          textAlign: { xs: 'center', md: 'start' },  // Ajuste aquí
           padding: { xs: 1, md: 2 },
         }}
       >
@@ -46,52 +46,52 @@ const Contact = forwardRef((props, ref) => {
           CONTACTAME
         </Typography>
 
-        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 2 }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-            <Email sx={{ color: theme.palette.primary.main, mr: 1 }} />
-            <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
-              Mi correo:
-            </Typography>
-          </Box>
-          <Typography variant="body1" sx={{ color: theme.palette.primary.main, fontSize: '1.2rem', mb: 2 }}>
-            jp.sherka@gmail.com
+        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, alignItems: 'center', mt: 2 }}>
+          <Email sx={{ color: theme.palette.primary.main, mr: { xs: 0, sm: 1 }, mb: { xs: 1, sm: 0 } }} />
+          <Typography variant="body1" sx={{ fontSize: '1.2rem', mb: { xs: 1, sm: 0 } }}>
+            Mi correo:
           </Typography>
-        </Box>
-
-        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 2 }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-            <Phone sx={{ color: theme.palette.primary.main, mr: 1 }} />
-            <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
-              Mi teléfono:
+          <Box sx={{ pl: { xs: 0, sm: 2 } }}>
+            <Typography variant="body1" sx={{ color: theme.palette.primary.main, fontSize: '1.2rem' }}>
+              jp.sherka@gmail.com
             </Typography>
           </Box>
-          <Typography variant="body1" sx={{ color: theme.palette.primary.main, fontSize: '1.2rem', mb: 2 }}>
-            +56 979 009 008
+        </Box>
+
+        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, alignItems: 'center', mt: 2 }}>
+          <Phone sx={{ color: theme.palette.primary.main, mr: { xs: 0, sm: 1 }, mb: { xs: 1, sm: 0 } }} />
+          <Typography variant="body1" sx={{ fontSize: '1.2rem', mb: { xs: 1, sm: 0 } }}>
+            Mi teléfono:
           </Typography>
-        </Box>
-
-        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 2 }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-            <LinkedIn sx={{ color: theme.palette.primary.main, mr: 1 }} />
-            <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
-              Mi LinkedIn:
+          <Box sx={{ pl: { xs: 0, sm: 2 } }}>
+            <Typography variant="body1" sx={{ color: theme.palette.primary.main, fontSize: '1.2rem' }}>
+              +56 979 009 008
             </Typography>
           </Box>
-          <Link href="https://www.linkedin.com/in/jpsq/" target="_blank" sx={{ fontSize: '1.2rem', mb: 2 }}>
-            https://www.linkedin.com/in/jpsq/
-          </Link>
         </Box>
 
-        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 2 }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-            <GitHub sx={{ color: theme.palette.primary.main, mr: 1 }} />
-            <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
-              Mi GitHub:
-            </Typography>
+        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, alignItems: 'center', mt: 2 }}>
+          <LinkedIn sx={{ color: theme.palette.primary.main, mr: { xs: 0, sm: 1 }, mb: { xs: 1, sm: 0 } }} />
+          <Typography variant="body1" sx={{ fontSize: '1.2rem', mb: { xs: 1, sm: 0 } }}>
+            Mi LinkedIn:
+          </Typography>
+          <Box sx={{ pl: { xs: 0, sm: 2 } }}>
+            <Link href="https://www.linkedin.com/in/jpsq/" target="_blank" sx={{ fontSize: '1.2rem' }}>
+              https://www.linkedin.com/in/jpsq/
+            </Link>
           </Box>
-          <Link href="https://github.com/JuanPabloSQ" target="_blank" sx={{ fontSize: '1.2rem', mb: 2 }}>
-            https://github.com/JuanPabloSQ
-          </Link>
+        </Box>
+
+        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, alignItems: 'center', mt: 2 }}>
+          <GitHub sx={{ color: theme.palette.primary.main, mr: { xs: 0, sm: 1 }, mb: { xs: 1, sm: 0 } }} />
+          <Typography variant="body1" sx={{ fontSize: '1.2rem', mb: { xs: 1, sm: 0 } }}>
+            Mi GitHub:
+          </Typography>
+          <Box sx={{ pl: { xs: 0, sm: 2 } }}>
+            <Link href="https://github.com/JuanPabloSQ" target="_blank" sx={{ fontSize: '1.2rem' }}>
+              https://github.com/JuanPabloSQ
+            </Link>
+          </Box>
         </Box>
       </Box>
     </Box>

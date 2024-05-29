@@ -21,7 +21,7 @@ const Intro = forwardRef((props, ref) => {
                 minHeight: '100vh',
                 padding: 2,
                 textAlign: { xs: 'center', md: 'left' },
-                mt: { xs: '56px', md: '64px' }  // Ajuste para compensar la altura de la AppBar
+                mt: { xs: '56px', md: '64px' } 
             }}
         >
             <Box
