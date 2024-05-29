@@ -35,7 +35,7 @@ export default function NavBar({ introRef, aboutRef, skillsRef, proyectsRef, con
   const menuItems = [
     { label: 'JPSQ', ref: introRef },
     { label: 'SOBRE MI', ref: aboutRef },
-    { label: 'SKILLS', ref: skillsRef },
+    { label: 'HABILIDADES', ref: skillsRef },
     { label: 'PROYECTOS', ref: proyectsRef },
     { label: 'EDUCACION', ref: educationRef },
     { label: 'RECONOCIMIENTOS', ref: recognitionRef },
@@ -51,7 +51,17 @@ export default function NavBar({ introRef, aboutRef, skillsRef, proyectsRef, con
     >
       <List>
         {menuItems.map((item, index) => (
-          <ListItem button key={index} onClick={() => scrollToSection(item.ref)}>
+          <ListItem
+            button
+            key={index}
+            onClick={() => scrollToSection(item.ref)}
+            sx={{
+              '&:hover': {
+                border: `2px solid ${theme.palette.primary.main}`,
+                boxShadow: `0 0 10px ${theme.palette.primary.main}`,
+              },
+            }}
+          >
             <ListItemText primary={item.label} />
           </ListItem>
         ))}
