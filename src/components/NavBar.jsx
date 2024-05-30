@@ -80,7 +80,7 @@ export default function NavBar({ introRef, aboutRef, skillsRef, proyectsRef, con
           left: '50%',
           transform: 'translateX(-50%)',
           borderRadius: '20px',
-          width: { xs: '90%', sm: '61%' },
+          width: { xs: '90%', sm: '62%' },
           boxShadow: theme.shadows[5],
           backgroundColor: theme.palette.background.paper,
           color: theme.palette.text.primary,
