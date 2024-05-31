@@ -54,6 +54,7 @@ const Intro = forwardRef((props, ref) => {
                 variant="contained"
                 color="primary"
                 href="/Curriculum_vitae.pdf"
+                target="_blank" 
                 download
                 sx={{ mt: { xs: 2, md: 0 } }}
             >
