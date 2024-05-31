@@ -11,7 +11,7 @@ const Intro = forwardRef((props, ref) => {
     const theme = useTheme();
     
     const handleCurriculumClick = () => {
-        window.open('portafolio/Curriculum_vitae.pdf', '_blank');
+        window.open('https://juanpablosq.github.io/portafolio/', '_blank');
     };
 
     return (
