@@ -10,6 +10,10 @@ import img from '../img/img.webp';
 const Intro = forwardRef((props, ref) => {
     const theme = useTheme();
     
+    const handleCurriculumClick = () => {
+        window.open('portafolio/Curriculum_vitae.pdf', '_blank');
+    };
+
     return (
         <Box
             ref={ref}
@@ -53,9 +57,7 @@ const Intro = forwardRef((props, ref) => {
             <Button
                 variant="contained"
                 color="primary"
-                href="/Curriculum_vitae.pdf"
-                target="_blank" 
-                download
+                onClick={handleCurriculumClick}  
                 sx={{ mt: { xs: 2, md: 0 } }}
             >
                 <Typography variant='h5'> Curriculum </Typography>
