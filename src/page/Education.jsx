@@ -96,7 +96,8 @@ const Education = forwardRef((props, ref) => {
                         <Button
                             variant="contained"
                             color="primary"
-                            href="/certificate.pdf"
+                            href="https://github.com/JuanPabloSQ/portafolio/blob/main/public/certificate.pdf"
+                            target="_blank"
                             download
                             sx={{
                                 position: 'relative',
@@ -119,7 +120,8 @@ const Education = forwardRef((props, ref) => {
                         <Button
                             variant="contained"
                             color="primary"
-                            href="/udemy.pdf"
+                            href="https://github.com/JuanPabloSQ/portafolio/blob/main/public/udemy.pdf"
+                            target="_blank"
                             download
                             sx={{
                                 position: 'relative',
