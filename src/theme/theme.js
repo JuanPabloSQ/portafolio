@@ -31,7 +31,6 @@ const getTheme = (mode) => ({
         secondary: {
           main: blueGrey[50],
         },
-        // palette values for dark mode
       }),
   },
 });
