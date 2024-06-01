@@ -75,6 +75,13 @@ const Education = forwardRef((props, ref) => {
                             color="primary"
                             href="/resume.pdf"
                             download
+                            sx={{
+                                position: 'relative',
+                                '&:hover': {
+                                    boxShadow: '0 0 20px 5px rgba(0, 255, 0, 0.6)',
+                                },
+                                transition: 'box-shadow 0.3s ease-in-out',
+                            }}
                         >
                             <Typography variant='h6'> Certificado </Typography>
                         </Button>
@@ -91,6 +98,13 @@ const Education = forwardRef((props, ref) => {
                             color="primary"
                             href="/certificate.pdf"
                             download
+                            sx={{
+                                position: 'relative',
+                                '&:hover': {
+                                    boxShadow: '0 0 20px 5px rgba(0, 255, 0, 0.6)',
+                                },
+                                transition: 'box-shadow 0.3s ease-in-out',
+                            }}
                         >
                             <Typography variant='h6'> Certificado </Typography>
                         </Button>
@@ -107,6 +121,13 @@ const Education = forwardRef((props, ref) => {
                             color="primary"
                             href="/udemy.pdf"
                             download
+                            sx={{
+                                position: 'relative',
+                                '&:hover': {
+                                    boxShadow: '0 0 20px 5px rgba(0, 255, 0, 0.6)',
+                                },
+                                transition: 'box-shadow 0.3s ease-in-out',
+                            }}
                         >
                             <Typography variant='h6'> Certificado </Typography>
                         </Button>

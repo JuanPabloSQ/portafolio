@@ -57,8 +57,14 @@ const Intro = forwardRef((props, ref) => {
             <Button
                 variant="contained"
                 color="primary"
-                onClick={handleCurriculumClick}  
-                sx={{ mt: { xs: 2, md: 0 } }}
+                onClick={handleCurriculumClick}
+                sx={{
+                    mt: { xs: 2, md: 0 },
+                    '&:hover': {
+                        boxShadow: '0 0 20px 5px rgba(0, 255, 0, 0.6)',
+                    },
+                    transition: 'box-shadow 0.3s ease-in-out',
+                }}
             >
                 <Typography variant='h5'> Curriculum </Typography>
             </Button>

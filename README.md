@@ -1,8 +1,24 @@
-# React + Vite
+# Bienvenido a "Portafolio"
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Descripción
+La página web presentada es un portafolio profesional diseñado para presentarme como desarrollador web. Este proyecto fue desarrollado utilizando Vite y React, asegurando un rendimiento óptimo y una experiencia de usuario fluida. Además, se implementó Material-UI para estilizar los componentes, garantizando una interfaz moderna y coherente.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Instrucciones de depliegue
+
+- **Clonar el repositorio**
+    ```bash
+    git clone https://github.com/JuanPabloSQ/portafolio
+    ```
+
+
+- **Entrar a la carpeta portafolio y ejecutar el archivo index.html**
+
+
+## Tecnologias utilizadas
+
+- Esta página web fue creada utilizando HTML5, JavaScript, CSS, Node.js, Vite + React, Material UI
+
+## Enlace a páginas GitHub
+https://juanpablosq.github.io/portafolio/
