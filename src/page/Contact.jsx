@@ -47,10 +47,7 @@ const Contact = forwardRef((props, ref) => {
         </Typography>
 
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, alignItems: 'center', mt: 2 }}>
-          <Email sx={{ color: theme.palette.primary.main, mr: { xs: 0, sm: 1 }, mb: { xs: 1, sm: 0 } }} />
-          <Typography variant="body1" sx={{ fontSize: '1.2rem', mb: { xs: 1, sm: 0 } }}>
-            Mi correo:
-          </Typography>
+          <Email sx={{ color: "white", mr: { xs: 0, sm: 1 }, mb: { xs: 1, sm: 0 } }} />
           <Box sx={{ pl: { xs: 0, sm: 2 } }}>
             <Typography variant="body1" sx={{ color: theme.palette.primary.main, fontSize: '1.2rem' }}>
               jp.sherka@gmail.com
@@ -59,10 +56,7 @@ const Contact = forwardRef((props, ref) => {
         </Box>
 
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, alignItems: 'center', mt: 2 }}>
-          <Phone sx={{ color: theme.palette.primary.main, mr: { xs: 0, sm: 1 }, mb: { xs: 1, sm: 0 } }} />
-          <Typography variant="body1" sx={{ fontSize: '1.2rem', mb: { xs: 1, sm: 0 } }}>
-            Mi teléfono:
-          </Typography>
+          <Phone sx={{ color: "white", mr: { xs: 0, sm: 1 }, mb: { xs: 1, sm: 0 } }} />
           <Box sx={{ pl: { xs: 0, sm: 2 } }}>
             <Typography variant="body1" sx={{ color: theme.palette.primary.main, fontSize: '1.2rem' }}>
               +56 979 009 008
@@ -71,10 +65,7 @@ const Contact = forwardRef((props, ref) => {
         </Box>
 
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, alignItems: 'center', mt: 2 }}>
-          <LinkedIn sx={{ color: theme.palette.primary.main, mr: { xs: 0, sm: 1 }, mb: { xs: 1, sm: 0 } }} />
-          <Typography variant="body1" sx={{ fontSize: '1.2rem', mb: { xs: 1, sm: 0 } }}>
-            Mi LinkedIn:
-          </Typography>
+          <LinkedIn sx={{ color: "white", mr: { xs: 0, sm: 1 }, mb: { xs: 1, sm: 0 } }} />
           <Box sx={{ pl: { xs: 0, sm: 2 } }}>
             <Link href="https://www.linkedin.com/in/jpsq/" target="_blank" sx={{ fontSize: '1.2rem' }}>
               https://www.linkedin.com/in/jpsq/
@@ -83,10 +74,7 @@ const Contact = forwardRef((props, ref) => {
         </Box>
 
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, alignItems: 'center', mt: 2 }}>
-          <GitHub sx={{ color: theme.palette.primary.main, mr: { xs: 0, sm: 1 }, mb: { xs: 1, sm: 0 } }} />
-          <Typography variant="body1" sx={{ fontSize: '1.2rem', mb: { xs: 1, sm: 0 } }}>
-            Mi GitHub:
-          </Typography>
+          <GitHub sx={{ color: "white", mr: { xs: 0, sm: 1 }, mb: { xs: 1, sm: 0 } }} />
           <Box sx={{ pl: { xs: 0, sm: 2 } }}>
             <Link href="https://github.com/JuanPabloSQ" target="_blank" sx={{ fontSize: '1.2rem' }}>
               https://github.com/JuanPabloSQ

@@ -46,10 +46,10 @@ const Intro = forwardRef((props, ref) => {
                         Desarrollador Full-Stack 
                     </Typography>
                     <Typography variant="h5" gutterBottom>
-                        <EmailIcon /> Email: jp.sherka@gmail.com
+                        <EmailIcon /> : jp.sherka@gmail.com
                     </Typography>
                     <Typography variant="h5" gutterBottom>
-                        <LocalPhoneIcon /> Tef: +56 979 009 008
+                        <LocalPhoneIcon /> : +56 979 009 008
                     </Typography>
                 </Box>
                 <Avatar alt="JPSQ" src={img} sx={{ width: { xs: 200, md: 300 }, height: { xs: 200, md: 300 } }} />
